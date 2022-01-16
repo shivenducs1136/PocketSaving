@@ -2,4 +2,12 @@
     <string name="app_name">PocketSaving</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_onboarding_1">Welcome to Pocket Saving</string>
+    <string name="description_onboarding_1">An application that will help you to manage your college Pocket Money</string>
+    <string name="title_onboarding_2">Save your Money</string>
+    <string name="description_onboarding_2">Keep track on the flow of your money and save from unnecessary stuffs.</string>
+    <string name="title_onboarding_3">Plan your expenses</string>
+    <string name="description_onboarding_3">Plan your trip smartly, get spend warnings, calculate per head cost.</string>
+    <string name="privacytext">By continuing on this application you agree to our Terms of Use and Privacy Policy</string>
+    <string name="continuewithgoogletext">Continue With Google</string>
 </resources>

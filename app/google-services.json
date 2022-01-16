@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "572218608495",
+    "project_id": "pocketsaving-a85d7",
+    "storage_bucket": "pocketsaving-a85d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572218608495:android:b21e093740e080fa6ef69a",
+        "android_client_info": {
+          "package_name": "com.dsckiet.pocketsaving"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572218608495-h5la4ub8re2dipk369q9t9qbo6d97d6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAz9XKqRmod8du4nMAfT7prYsWNTMkNeqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572218608495-h5la4ub8re2dipk369q9t9qbo6d97d6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
