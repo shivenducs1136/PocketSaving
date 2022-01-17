@@ -3,7 +3,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+<<<<<<< HEAD
     <data>
+=======
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Welcome"
+        android:textColor="#349B89"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/dropdown"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/ic_down" />
+>>>>>>> 98e8c19a8fbfb0e2dc7abcc2159025286ec16ec1
 
     </data>
 
@@ -89,6 +115,7 @@
             android:layout_margin="20dp"
             android:id="@+id/recyclerV" />
 
+<<<<<<< HEAD
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="60dp"
             android:layout_height="50dp"
@@ -99,6 +126,18 @@
             android:clickable="true"
             android:src="@drawable/add"
             android:visibility="visible" />
+=======
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fButton"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:src="@drawable/add"
+        android:visibility="visible" />
+>>>>>>> 98e8c19a8fbfb0e2dc7abcc2159025286ec16ec1
 
 
     </RelativeLayout>
