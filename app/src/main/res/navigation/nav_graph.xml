@@ -50,6 +50,12 @@
         android:label="fragment_floating_btn"
         tools:layout="@layout/fragment_floating_btn" />
     <fragment
+
+        android:id="@+id/sideNavFragment"
+        android:name="com.dsckiet.pocketsaving.ui.SideNavFragment"
+        android:label="fragment_side_nav"
+        tools:layout="@layout/fragment_side_nav" />
+    <fragment
         android:id="@+id/planPaymentsFragment"
         android:name="com.dsckiet.pocketsaving.ui.PlanPaymentsFragment"
         android:label="fragment_plan_payments"

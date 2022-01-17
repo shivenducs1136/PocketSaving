@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.viewpager2.widget.ViewPager2
+import com.dsckiet.pocketsaving.EnterPocketMoney
 import com.dsckiet.pocketsaving.MainActivity
 import com.dsckiet.pocketsaving.R
 import com.dsckiet.pocketsaving.ViewPagerAdapter.CWGViewPagerAdapter
@@ -134,7 +135,7 @@ class ContinueWithGoogleFragment : Fragment() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(ContentValues.TAG, "signInWithCredential:success")
                     val user = auth.currentUser
-                    val i = Intent(requireActivity(), MainActivity::class.java)
+                    val i = Intent(requireActivity(), EnterPocketMoney::class.java)
                     startActivity(i)
                     val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@addOnCompleteListener
                     with (sharedPref.edit()) {
