@@ -3,20 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/entryFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/entryFragment"
-        android:name="com.dsckiet.pocketsaving.EntryFragment"
-        android:label="fragment_entry"
-        tools:layout="@layout/fragment_entry" >
-        <action
-            android:id="@+id/action_entryFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/homeFragment"
-        android:name="com.dsckiet.pocketsaving.HomeFragment"
+        android:name="com.dsckiet.pocketsaving.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -28,19 +19,20 @@
         <action
             android:id="@+id/action_homeFragment_to_payOnlineFragment2"
             app:destination="@id/payOnlineFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_sideNavFragment2"
-            app:destination="@id/sideNavFragment" />
+
         <action
             android:id="@+id/action_homeFragment_to_planPaymentsFragment"
             app:destination="@id/planPaymentsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/payOnlineFragment"
-        android:name="com.dsckiet.pocketsaving.PayOnlineFragment"
+        android:name="com.dsckiet.pocketsaving.ui.PayOnlineFragment"
         android:label="fragment_pay_online"
         tools:layout="@layout/fragment_pay_online" >
         <action
@@ -49,27 +41,36 @@
     </fragment>
     <fragment
         android:id="@+id/pocketMoneyFragment"
-        android:name="com.dsckiet.pocketsaving.PocketMoneyFragment"
+        android:name="com.dsckiet.pocketsaving.ui.PocketMoneyFragment"
         android:label="fragment_pocket_money"
         tools:layout="@layout/fragment_pocket_money" />
     <fragment
         android:id="@+id/floatingBtnFragment"
-        android:name="com.dsckiet.pocketsaving.FloatingBtnFragment"
+        android:name="com.dsckiet.pocketsaving.ui.FloatingBtnFragment"
         android:label="fragment_floating_btn"
         tools:layout="@layout/fragment_floating_btn" />
     <fragment
-        android:id="@+id/sideNavFragment"
-        android:name="com.dsckiet.pocketsaving.SideNavFragment"
-        android:label="fragment_side_nav"
-        tools:layout="@layout/fragment_side_nav" />
-    <fragment
         android:id="@+id/planPaymentsFragment"
-        android:name="com.dsckiet.pocketsaving.PlanPaymentsFragment"
+        android:name="com.dsckiet.pocketsaving.ui.PlanPaymentsFragment"
         android:label="fragment_plan_payments"
-        tools:layout="@layout/fragment_plan_payments" />
+        tools:layout="@layout/fragment_plan_payments" >
+        <action
+            android:id="@+id/action_planPaymentsFragment_to_addPlanFragment"
+            app:destination="@id/addPlanFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.dsckiet.pocketsaving.SettingsFragment"
+        android:name="com.dsckiet.pocketsaving.ui.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dsckiet.pocketsaving.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addPlanFragment"
+        android:name="com.dsckiet.pocketsaving.ui.AddPlanFragment"
+        android:label="fragment_add_plan"
+        tools:layout="@layout/fragment_add_plan" />
 </navigation>

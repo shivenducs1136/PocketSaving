@@ -1,17 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.ProfileFragment">
 
-    <Button
-        android:id="@+id/logoutbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_centerInParent="true"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Logout"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/d_blue">
 
-</RelativeLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ppic"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/ic_undraw_female_avatar_w3jk" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ppic"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/cardbg">
+
+                <TextView
+                    android:id="@+id/Hi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="50dp"
+                    android:text="Hi,"
+                    android:textSize="30sp"
+                    android:textStyle="bold|italic" />
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Hi"
+                    android:layout_centerHorizontal="true"
+                    android:text="Name"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="Name123@gmail.com"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/email"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginBottom="80dp"
+                    android:background="@drawable/logout"
+                    android:gravity="center"
+                    android:text="Logout"
+                    android:textSize="20dp" />
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+</FrameLayout>

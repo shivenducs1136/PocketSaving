@@ -3,12 +3,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PocketMoneyFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.PocketMoneyFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/background"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="30dp"
+            android:src="@drawable/add"/>
+        <TextView
+            android:id="@+id/income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add"
+            android:layout_marginLeft="20dp"
+            android:text="Pocket Money"
+            android:textSize="22sp"
+            android:textStyle="bold|italic"/>
+        <TextView
+            android:id="@+id/paisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/income"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Rs. 100"
+            android:textSize="35sp"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/paisa"
+            android:layout_marginTop="20dp"
+            android:id="@+id/posts"
+            tools:listitem="@layout/income"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    </RelativeLayout>
 
 </FrameLayout>
