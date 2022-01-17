@@ -35,7 +35,6 @@
                     android:clipToPadding="false"
                     android:overScrollMode="never" />
 
-
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/pageIndicator"
                     android:layout_width="wrap_content"
@@ -48,7 +47,6 @@
 
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:id="@+id/layout_info"
