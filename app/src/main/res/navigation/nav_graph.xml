@@ -19,15 +19,16 @@
         <action
             android:id="@+id/action_homeFragment_to_payOnlineFragment2"
             app:destination="@id/payOnlineFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_sideNavFragment2"
-            app:destination="@id/sideNavFragment" />
+
         <action
             android:id="@+id/action_homeFragment_to_planPaymentsFragment"
             app:destination="@id/planPaymentsFragment" />
         <action
             android:id="@+id/action_homeFragment_to_settingsFragment"
             app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/payOnlineFragment"
@@ -49,6 +50,7 @@
         android:label="fragment_floating_btn"
         tools:layout="@layout/fragment_floating_btn" />
     <fragment
+
         android:id="@+id/sideNavFragment"
         android:name="com.dsckiet.pocketsaving.ui.SideNavFragment"
         android:label="fragment_side_nav"
@@ -57,10 +59,24 @@
         android:id="@+id/planPaymentsFragment"
         android:name="com.dsckiet.pocketsaving.ui.PlanPaymentsFragment"
         android:label="fragment_plan_payments"
-        tools:layout="@layout/fragment_plan_payments" />
+        tools:layout="@layout/fragment_plan_payments" >
+        <action
+            android:id="@+id/action_planPaymentsFragment_to_addPlanFragment"
+            app:destination="@id/addPlanFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.dsckiet.pocketsaving.ui.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.dsckiet.pocketsaving.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/addPlanFragment"
+        android:name="com.dsckiet.pocketsaving.ui.AddPlanFragment"
+        android:label="fragment_add_plan"
+        tools:layout="@layout/fragment_add_plan" />
 </navigation>

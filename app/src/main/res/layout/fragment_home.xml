@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.HomeFragment">
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-<<<<<<< HEAD
     <data>
-=======
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
@@ -29,7 +31,6 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:src="@drawable/ic_down" />
->>>>>>> 98e8c19a8fbfb0e2dc7abcc2159025286ec16ec1
 
     </data>
 
@@ -113,9 +114,22 @@
             android:layout_below="@id/card2"
             android:layout_above="@id/fButton"
             android:layout_margin="20dp"
-            android:id="@+id/recyclerV" />
+            android:text="Pay Online"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
 
-<<<<<<< HEAD
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerV"
+        tools:listitem="@layout/expenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/card2"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp" />
+            android:id="@+id/recyclerV" />
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="60dp"
             android:layout_height="50dp"
@@ -126,7 +140,6 @@
             android:clickable="true"
             android:src="@drawable/add"
             android:visibility="visible" />
-=======
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fButton"
         android:layout_width="60dp"
@@ -137,7 +150,6 @@
         android:clickable="true"
         android:src="@drawable/add"
         android:visibility="visible" />
->>>>>>> 98e8c19a8fbfb0e2dc7abcc2159025286ec16ec1
 
 
     </RelativeLayout>
