@@ -1,6 +1,5 @@
 package com.dsckiet.pocketsaving
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -10,7 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -25,5 +24,8 @@ class MainActivity : AppCompatActivity() {
         plan.setOnClickListener {
             navController.navigate(R.id.planPaymentsFragment)
         }
+
+
+
     }
 }

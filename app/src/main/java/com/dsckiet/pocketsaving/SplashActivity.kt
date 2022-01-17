@@ -1,5 +1,6 @@
 package com.dsckiet.pocketsaving
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,8 +10,18 @@ import com.dsckiet.pocketsaving.ui.ContinueWithGoogleFragment
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.FirebaseAuth
+import android.preference.PreferenceManager
+
+import android.content.SharedPreferences
+import android.net.ConnectivityManager
+import android.util.Log
+import android.view.View
+import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
+
 
 class SplashActivity : AppCompatActivity() {
+
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var signInAccount: GoogleSignInAccount
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,20 +29,35 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         firebaseAuth = FirebaseAuth.getInstance()
         val cont = findViewById<FragmentContainerView>(R.id.fragmentContainerView)
-        if(GoogleSignIn.getLastSignedInAccount(this) == null){
-            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,
-                ContinueWithGoogleFragment()
-            )
+
+        if(isNetworkConnected()){
+            Log.e("user",firebaseAuth.currentUser.toString())
+            if (firebaseAuth.currentUser == null) {
+                supportFragmentManager.beginTransaction().replace(
+                    R.id.fragmentContainerView,
+                    ContinueWithGoogleFragment()
+                )
+            } else {
+                splashfun()
+            }
         }
-        else
-            splashfun()
+        else{
+            Toast.makeText(this,"Please check your Internet Connection.",Toast.LENGTH_SHORT).show()
+        }
     }
     fun splashfun() {
-        Handler().postDelayed({
-            val i = Intent(this, MainActivity::class.java)
-            startActivity(i)
-            finish()
-        }, 3000)
 
+            Handler().postDelayed({
+                val i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+                finish()
+            }, 3000)
     }
+
+    private fun isNetworkConnected(): Boolean {
+        val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        return cm.activeNetworkInfo != null
+    }
+
+
 }
