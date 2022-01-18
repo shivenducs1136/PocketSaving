@@ -3,44 +3,36 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_blue_normal.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_blue_pressed.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_blue_selector.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_grey_rounded_normal.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_grey_rounded_pressed.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_orange_rounded_normal.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_orange_rounded_pressed.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/cursor.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/ic_rectangle_btm.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/ic_rectangle_white.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/layout_rounded_top_white.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/mainbgpocketmoney.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/onboarding_selected_dot_blue.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/onboarding_selected_dot_white.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/onboarding_unselected_dot_blue.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/onboarding_unselected_dot_orange.xml" value="0.1421875" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/onboarding_unselected_dot_white.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/onboarding_viewpager_selector_white.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/redbuttonbg.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/whitecircularrectangle.xml" value="0.2484375" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/activity_enter_pocket_money.xml" value="0.264" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/activity_main.xml" value="0.11197916666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/activity_splash.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/expenses.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_add_plan.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_continue_with_google.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_entry.xml" value="0.4" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_floating_btn.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_home.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_onboarding2.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_pay_online.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_plan_payments.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_pocket_money.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_settings.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/income.xml" value="0.1" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/add.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/background.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/cardbg.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/crossbtn.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/cursor.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/greenbg.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/ic_next.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/ic_outline_close_24.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/logout.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/drawable/redbg.xml" value="0.2125" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/font/fonts.xml" value="0.2230769230769231" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/activity_splash.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/expenses.xml" value="0.33" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_add_expense.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_add_plan.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_continue_with_google.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_entry.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_floating_btn.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_onboarding2.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_pay_online.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_plan_payments.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_pocket_money.xml" value="0.22" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_settings.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/fragment_side_nav.xml" value="0.19635416666666666" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/layout/income.xml" value="0.25" />
+        <entry key="..\:/Users/Lenovo/AndroidStudioProjects/PocketSaving/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19635416666666666" />
+
       </map>
     </option>
   </component>
