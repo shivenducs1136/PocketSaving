@@ -2,13 +2,10 @@ package com.dsckiet.pocketsaving
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import kotlinx.android.synthetic.main.activity_main.*
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,16 +15,46 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val navController = findNavController(R.id.navHostFragment)
 
+        val bottomnavview = findViewById<BottomNavigationView>(R.id.bottomnavview)
+        bottomnavview.background = null
+        val myfab = findViewById<FloatingActionButton>(R.id.myfab)
 
-
-        fabtn.setOnClickListener {
+        myfab.setOnClickListener {
+            navController.popBackStack()
             navController.navigate(R.id.floatingBtnFragment)
-        }
-        val plan = findViewById<Button>(R.id.plan)
-        plan.setOnClickListener {
-            navController.navigate(R.id.planPaymentsFragment)
+
         }
 
+        bottomnavview.setOnNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> {
+
+                    navController.popBackStack()
+                    navController.navigate(R.id.homeFragment)
+                }
+                R.id.plan -> {
+
+                    navController.popBackStack()
+                    navController.navigate(R.id.planPaymentsFragment)
+
+                }
+                R.id.profile -> {
+
+                    navController.popBackStack()
+                    navController.navigate(R.id.profileFragment)
+
+                }
+                R.id.settings -> {
+
+                    navController.popBackStack()
+                    navController.navigate(R.id.settingsFragment)
+
+                }
+
+            }
+            true
+        }
 
     }
+
 }

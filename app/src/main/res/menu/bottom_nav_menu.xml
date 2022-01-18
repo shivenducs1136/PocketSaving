@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
         android:id="@+id/home"
         android:title=" "
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_home_24"
         />
     <item
+        app:showAsAction="ifRoom"
         android:id="@+id/plan"
         android:title=" "
         android:icon="@drawable/ic_baseline_payment_24"
         />
     <item
+        android:id="@+id/holder"
+        android:title=""
+        android:enabled="false"
+        app:showAsAction="ifRoom"/>
+    <item
         android:id="@+id/profile"
         android:title=" "
+        app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_person_outline_24"
         />
     <item
         android:id="@+id/settings"
+        app:showAsAction="ifRoom"
         android:title=" "
         android:icon="@drawable/ic_baseline_settings_24"
         />

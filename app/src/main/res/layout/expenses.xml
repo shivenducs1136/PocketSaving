@@ -6,8 +6,12 @@
 
     </data>
 
+
+
+
+
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <androidx.cardview.widget.CardView
@@ -61,8 +65,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/category"
-                    android:layout_marginTop="10dp"
                     android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
                     android:text="Title"
                     android:textColor="@color/basic"
                     android:textSize="25sp"
@@ -81,13 +85,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/icn"
                     android:layout_below="@id/title"
-                    android:text="Rs. 20"
-                    android:textSize="20sp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
-                    android:layout_marginBottom="20dp" />
+                    android:layout_marginBottom="20dp"
+                    android:layout_toRightOf="@id/icn"
+                    android:text="Rs. 20"
+                    android:id="@+id/myrupya"
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 

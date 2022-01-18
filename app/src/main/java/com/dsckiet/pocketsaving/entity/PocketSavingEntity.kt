@@ -7,15 +7,16 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "pocketmoney_table")
 class PocketSavingEntity(
-    @PrimaryKey
-    @ColumnInfo(name = "index") val index: String,
     @ColumnInfo(name = "amountspend") val amountspend: String,
     @ColumnInfo(name = "amountleft") val amountleft: String,
     @ColumnInfo(name = "totalamount") val totalamount: String,
     @ColumnInfo(name = "amountadded") val amountadded: String,
-    @ColumnInfo(name = "time") val time: String,
-    @ColumnInfo(name = "title") val title: String,
+    @ColumnInfo(name = "DateandTime") val Dateandtime: String,
+    @ColumnInfo(name = "itemtitle") val title: String,
     @ColumnInfo(name = "category") val category: String,
     @ColumnInfo(name = "note") val note: String,
 
-)
+){
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name ="index") var i=0
+}

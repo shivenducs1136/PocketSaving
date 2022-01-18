@@ -1,193 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.FloatingBtnFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <HorizontalScrollView
-        android:id="@+id/hscrollView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/chip_group2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            app:chipSpacing="10dp">
+    <data>
 
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:text="Pay Online"/>
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loan"/>
-
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add Limit"/>
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Planned Payments"/>
-            <com.google.android.material.chip.Chip
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Trips"/>
-
-        </com.google.android.material.chip.ChipGroup>
-    </HorizontalScrollView>
+    </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/hscrollView2">
+        tools:context=".ui.FloatingBtnFragment">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/name"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            app:boxCornerRadiusBottomEnd="12dp"
-            app:boxCornerRadiusBottomStart="12dp"
-            app:boxCornerRadiusTopEnd="12dp"
-            app:boxCornerRadiusTopStart="12dp"
-            app:boxStrokeColor="#17B7E8">
+        <HorizontalScrollView
+            android:id="@+id/hscrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:scrollbars="none"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <EditText
-                android:id="@+id/nameInput"
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Payee or item"
-                android:inputType="text" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_margin="10dp"
+                app:chipSpacing="20dp">
 
-        <ImageView
-            android:id="@+id/remove"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/name"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/redbg"
-            android:src="@drawable/remove" />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Pay Online"
+                    app:chipBackgroundColor="#D3E3EF" />
 
-        <ImageView
-            android:id="@+id/addM"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_below="@id/name"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/greenbg"
-            android:src="@drawable/add" />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Loan"
+                    app:chipBackgroundColor="#D3E3EF" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/name"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/addM"
-            android:text="0.00"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Add Limit"
+                    app:chipBackgroundColor="#D3E3EF" />
 
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Planned Payments"
+                    app:chipBackgroundColor="#D3E3EF" />
 
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Trips"
+                    app:chipBackgroundColor="#D3E3EF" />
 
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
 
-        <ImageView
-            android:id="@+id/calender"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_below="@id/addM"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/calender" />
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/addM"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_toRightOf="@id/calender"
-            android:text="16 January 2022"
-            android:textSize="18sp" />
-
-        <ImageView
-            android:id="@+id/notes"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_below="@id/calender"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="25dp"
-            android:src="@drawable/ic_baseline_edit_note_24" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/date"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:layout_toRightOf="@id/calender"
-            android:text="Notes"
-            android:textSize="18sp" />
-        <com.google.android.material.card.MaterialCardView
-            android:layout_below="@id/notes"
-            android:layout_height="100dp"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_margin="24dp"
-            android:elevation="5dp"
-            app:cardCornerRadius="15dp"
-            android:id="@+id/textnote"
-            >
+            android:layout_height="match_parent"
+            android:layout_below="@id/hscrollView2">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#17B7E8">
+
+                <EditText
+                    android:id="@+id/nameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="Payee or item"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/remove"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/redbg"
+                android:src="@drawable/remove" />
+
+            <ImageView
+                android:id="@+id/addM"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/name"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/greenbg"
+                android:src="@drawable/add" />
 
             <EditText
-                android:id="@+id/addnote"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:id="@+id/entered_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/addM"
                 android:background="@color/white"
-                android:gravity="top|start"
-                android:hint="Notes"
-                android:inputType="textMultiLine"
-                android:lines="8"
-                android:maxLines="10"
-                android:minLines="6"
-                android:padding="10dp"
-                android:scrollbars="vertical" />
+                android:fontFamily="@font/poppins_bold"
+                android:hint="0.0"
+                android:maxLength="10"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-        </com.google.android.material.card.MaterialCardView>
 
-        <TextView
-            android:id="@+id/addBtn"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/textnote"
-            android:layout_centerHorizontal="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="80dp"
-            android:layout_marginBottom="80dp"
-            android:background="@drawable/logout"
-            android:gravity="center"
-            android:text="Add"
-            android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/calender"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/addM"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/calender" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addM"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/calender"
+                android:text="16 January 2022"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/notes"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_below="@id/calender"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/ic_baseline_edit_note_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_toRightOf="@id/calender"
+                android:text="Notes"
+                android:textSize="18sp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/textnote"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/notes"
+                android:layout_margin="24dp"
+                android:elevation="5dp"
+                app:cardCornerRadius="15dp">
+
+                <EditText
+                    android:id="@+id/addnote"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="top|start"
+                    android:hint="Notes"
+                    android:inputType="textMultiLine"
+                    android:lines="8"
+                    android:maxLength="40"
+                    android:maxLines="10"
+                    android:minLines="6"
+                    android:padding="10dp"
+                    android:scrollbars="vertical" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textnote"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="80dp"
+                android:id="@+id/addBtn"
+                android:layout_marginBottom="80dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/logout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="Add"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </RelativeLayout>
+
 
     </RelativeLayout>
-
-
-
-</RelativeLayout>
+</layout>

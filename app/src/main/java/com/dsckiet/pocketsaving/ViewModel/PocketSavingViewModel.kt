@@ -30,10 +30,6 @@ class PocketSavingViewModel(application: Application): AndroidViewModel(applicat
     fun insertFriend(pocketSavingEntity: PocketSavingEntity)= viewModelScope.launch (Dispatchers.IO){
         repository.insert(pocketSavingEntity)
     }
-//    fun updateSubject(Subjectname: String, status: String, TotalClasses: String, AttendedClasses: String,currdatetime:String)= viewModelScope.launch (
-//        Dispatchers.IO){
-//        repository.update(Subjectname,status,TotalClasses,AttendedClasses,currdatetime)
-//    }
     fun getSub()=viewModelScope.launch (Dispatchers.IO){
         repository.getSubject()
     }

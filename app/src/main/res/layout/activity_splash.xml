@@ -7,6 +7,38 @@
     tools:context=".SplashActivity">
 
 
+
+
+
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/mylottie"
+        app:lottie_rawRes="@raw/wallet"
+        app:lottie_autoPlay="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/pocketsavingtext"
+        app:lottie_loop="true"
+        />
+    <TextView
+        android:id="@+id/pocketsavingtext"
+        android:layout_width="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:text="PocketSaving"
+        app:layout_constraintTop_toTopOf="@+id/mylottie"
+        app:layout_constraintBottom_toBottomOf="@+id/mylottie"
+        android:layout_marginLeft="100dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        />
     <fragment
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
