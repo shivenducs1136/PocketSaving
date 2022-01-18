@@ -9,7 +9,7 @@
 
     </data>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -24,33 +24,79 @@
             app:navGraph="@navigation/nav_graph"
             />
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
+        <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+            android:id="@+id/bottom_navigation_view_linear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:fabCradleMargin="20dp"
-            app:fabCradleRoundedCornerRadius="20dp"
-            app:fabCradleVerticalOffset="10dp">
+            android:background="@drawable/ic_rectangle_white"
+            android:elevation="8dp"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:menu="@menu/bottom_nav_menu"
+            app:navGraph="@navigation/nav_graph"
+            >
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
-                android:layout_width="match_parent"
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/l_item_home"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                app:menu="@menu/bottom_nav_menu" />
+                android:layout_marginRight="10dp"
+                app:bt_active="true"
+                app:bt_colorActive="#8279DA"
+                app:bt_colorInactive="#9e9e9e"
+                app:bt_icon="@drawable/ic_baseline_home_24"
+                app:bt_padding="10dp"
+                app:bt_shape="@drawable/ic_rectangle_btm"
+                app:bt_title="Home"
+                app:bt_titlePadding="10dp" />
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/l_item_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:bt_active="true"
+                app:bt_colorActive="#8279DA"
+                app:bt_colorInactive="#9e9e9e"
+                app:bt_icon="@drawable/ic_baseline_payment_24"
+                app:bt_padding="10dp"
+                app:bt_shape="@drawable/ic_rectangle_btm"
+                app:bt_title="Search"
+                app:bt_titlePadding="10dp" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/add"
-            app:layout_anchor="@id/bottomAppBar"
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/l_item_playlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bt_active="true"
+                app:bt_colorActive="#8279DA"
+                app:bt_colorInactive="#AAAAAA"
+                app:bt_icon="@drawable/ic_baseline_person_outline_24"
+                app:bt_padding="10dp"
+                app:bt_shape="@drawable/ic_rectangle_btm"
+                app:bt_title="Subscription"
+                app:bt_titlePadding="10dp" />
 
-            />
+            <com.gauravk.bubblenavigation.BubbleToggleView
+                android:id="@+id/l_item_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:bt_active="true"
+                app:bt_colorActive="#8279DA"
+                app:bt_colorInactive="#AAAAAA"
+                app:bt_icon="@drawable/ic_baseline_settings_24"
+                app:bt_padding="10dp"
+                app:bt_shape="@drawable/ic_rectangle_btm"
+                app:bt_title="Profile"
+                app:bt_titlePadding="10dp" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

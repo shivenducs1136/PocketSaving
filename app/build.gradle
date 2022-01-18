@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'com.google.gms.google-services'
 }
 
@@ -66,4 +67,20 @@ dependencies {
 
     // Material Design
     implementation 'com.google.android.material:material:1.3.0-alpha03'
+    //CircularImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7' // bubble navigation
+
+
+
+    // Room components
+    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    implementation  'nl.psdcompany:duo-navigation-drawer:3.0.0'
+
+
 }
