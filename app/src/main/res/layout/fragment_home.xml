@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.HomeFragment">
-    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
     <TextView
         android:id="@+id/welcome"
         android:layout_width="wrap_content"
@@ -21,103 +19,51 @@
         android:textSize="28sp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/dropdown"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentRight="true"
+
+    <TextView
+        android:id="@+id/rupees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:src="@drawable/ic_down" />
+        android:text="Rs.1000"
+        android:textSize="38sp" />
 
-    </data>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.HomeFragment">
-
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/background"
+        android:layout_below="@id/rupees"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp" >
         <TextView
-            android:id="@+id/welcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:text="Welcome"
-            android:textColor="#349B89"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/dropdown"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_margin="15dp"
-            android:src="@drawable/ic_down" />
-
+            android:layout_margin="20dp"
+            android:text="Pocket Money"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card2"
+        android:layout_toRightOf="@id/card1"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/background"
+        android:layout_below="@id/rupees"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp">
         <TextView
-            android:id="@+id/rupees"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/welcome"
-            android:layout_marginStart="15dp"
-            android:text="Rs.1000"
-            android:textSize="38sp" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
-            app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="@color/background"
-            android:layout_below="@id/rupees"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Pocket Money"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
-            android:layout_toRightOf="@id/card1"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
-            app:cardCornerRadius="15dp"
-            app:cardBackgroundColor="@color/background"
-            android:layout_below="@id/rupees"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Pay Online"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/card2"
-            android:layout_above="@id/fButton"
             android:layout_margin="20dp"
             android:text="Pay Online"
             android:textSize="17sp"
             android:textStyle="bold"/>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerV"
@@ -129,28 +75,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp" />
-            android:id="@+id/recyclerV" />
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="60dp"
-            android:layout_height="50dp"
-            android:id="@+id/fButton"
-            android:layout_alignParentBottom="true"
-            android:layout_centerInParent="true"
-            android:layout_marginBottom="40dp"
-            android:clickable="true"
-            android:src="@drawable/add"
-            android:visibility="visible" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fButton"
-        android:layout_width="60dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="40dp"
-        android:clickable="true"
-        android:src="@drawable/add"
-        android:visibility="visible" />
 
 
-    </RelativeLayout>
-</layout>
+
+</RelativeLayout>
