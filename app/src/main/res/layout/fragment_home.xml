@@ -1,151 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.HomeFragment">
-
+    tools:context=".ui.HomeFragment"
+    >
     <data>
+
     </data>
 
-
-
-
-
-
-
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.HomeFragment"
-        >
+        android:layout_height="match_parent">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card1"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="@color/background"
-        android:layout_below="@id/rupees"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="20dp" >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="Pocket Money"
-            android:textSize="17sp"
-            android:textStyle="bold"/>
-    </com.google.android.material.card.MaterialCardView>
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card2"
-        android:layout_toRightOf="@id/card1"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        app:cardCornerRadius="15dp"
-        app:cardBackgroundColor="@color/background"
-        android:layout_below="@id/rupees"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="40dp">
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
+            android:layout_margin="10dp"
             android:fontFamily="@font/poppins_bold"
             android:text="Welcome"
-            android:textColor="#349B89"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/welcome"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
         <ImageView
-            android:id="@+id/dropdown"
-            android:layout_width="30dp"
+            android:layout_width="20dp"
             android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_margin="15dp"
-            android:src="@drawable/ic_down" />
-
+            android:src="@drawable/indian_rupee"
+            android:id="@+id/indianruppee"
+            app:layout_constraintTop_toTopOf="@+id/pocketmoney_amount"
+            app:layout_constraintBottom_toBottomOf="@+id/pocketmoney_amount"
+            app:layout_constraintRight_toLeftOf="@+id/pocketmoney_amount"
+            />
         <TextView
+            android:id="@+id/pocketmoney_amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:text="Pay Online"
-            android:textSize="17sp"
-            android:textStyle="bold"/>
-    </com.google.android.material.card.MaterialCardView>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerV"
-        tools:listitem="@layout/expenses"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/card2"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp" />
-
-
-
-</RelativeLayout>
-            android:layout_below="@id/welcome"
+            android:text="5000"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:layout_margin="10dp"
             android:textColor="@color/black"
             android:fontFamily="@font/poppins_bold"
-            android:layout_marginStart="15dp"
-            android:text="Rs.1000"
-            android:textSize="38sp" />
+            app:layout_constraintRight_toRightOf="parent"
+            />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card1"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
-            android:layout_below="@id/rupees"
-            android:layout_marginStart="40dp"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/addpocketmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/background"
-            app:cardCornerRadius="15dp">
+            app:cardCornerRadius="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            app:layout_constraintEnd_toStartOf="@+id/payonline"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Pocket Money"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </androidx.cardview.widget.CardView>
+                android:background="@drawable/rectanglebtnhomescreen">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card2"
-            android:layout_width="150dp"
-            android:layout_height="70dp"
-            android:layout_below="@id/rupees"
-            android:layout_marginStart="40dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Add Pocket Money"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/payonline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
             android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/card1"
-            app:cardBackgroundColor="@color/background"
-            app:cardCornerRadius="15dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/addpocketmoney"
+            >
 
-            <TextView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Pay Online"
-                android:textSize="17sp"
-                android:textStyle="bold" />
-        </androidx.cardview.widget.CardView>
+                android:background="@drawable/rectanglebtnhomescreen">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="    Pay Online  "
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/card2"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:text="Pay Online"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/addpocketmoney"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_margin="20dp"
+            android:id="@+id/myrecview"
+            tools:listitem="@layout/expenses"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>

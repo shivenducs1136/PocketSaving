@@ -16,7 +16,9 @@ import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
+import com.airbnb.lottie.LottieAnimationView
 import com.google.android.material.snackbar.Snackbar
 
 
@@ -28,16 +30,27 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         firebaseAuth = FirebaseAuth.getInstance()
-        val cont = findViewById<FragmentContainerView>(R.id.fragmentContainerView)
 
+        val cont = findViewById<FragmentContainerView>(R.id.fragmentContainerView)
+        val lottieview = findViewById<LottieAnimationView>(R.id.mylottie)
+        val text = findViewById<TextView>(R.id.pocketsavingtext)
+        lottieview.visibility = View.GONE
+        text.visibility = View.GONE
+        cont.visibility = View.GONE
         if(isNetworkConnected()){
             Log.e("user",firebaseAuth.currentUser.toString())
             if (firebaseAuth.currentUser == null) {
+                lottieview.visibility = View.GONE
+                text.visibility = View.GONE
+                cont.visibility = View.VISIBLE
                 supportFragmentManager.beginTransaction().replace(
                     R.id.fragmentContainerView,
                     ContinueWithGoogleFragment()
                 )
             } else {
+                lottieview.visibility = View.VISIBLE
+                text.visibility = View.VISIBLE
+                cont.visibility = View.GONE
                 splashfun()
             }
         }

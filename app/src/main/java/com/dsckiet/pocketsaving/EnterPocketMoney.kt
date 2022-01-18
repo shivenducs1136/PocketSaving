@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import com.google.android.material.card.MaterialCardView
+import android.content.SharedPreferences
+import android.util.Log
+
 
 class EnterPocketMoney : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,8 +21,16 @@ class EnterPocketMoney : AppCompatActivity() {
         nextbtn.setOnClickListener {
 
 
+            val settings = getSharedPreferences("mt",Context.MODE_PRIVATE)
+            val editor = settings.edit()
+            editor.putString("PocketMoney", enteredmoney.text.toString())
+            editor.commit()
+            editor.apply()
+            val sharedPref = this?.getSharedPreferences("mt",Context.MODE_PRIVATE) ?: return@setOnClickListener
+            val highScore = sharedPref.getString("PocketMoney", "0")
+            Log.e("EnterPocketMoney",highScore.toString())
             val i  = Intent(this,MainActivity::class.java)
-            i.putExtra("PocketMoney",enteredmoney.text.toString())
+//            i.putExtra("PocketMoney",)
             startActivity(i)
             finish()
 

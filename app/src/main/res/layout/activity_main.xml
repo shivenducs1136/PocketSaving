@@ -1,132 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <fragment
-        android:id="@+id/navHostFragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+           <fragment
+               android:id="@+id/navHostFragment"
+               android:name="androidx.navigation.fragment.NavHostFragment"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               app:defaultNavHost="true"
+               app:navGraph="@navigation/nav_graph"
+               />
 
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomappbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                app:fabCradleMargin="10dp"
+                app:fabCradleRoundedCornerRadius="50dp"
+                app:hideOnScroll="true"
+                >
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:menu="@menu/bottom_nav_menu"
+                    android:layout_marginRight="20dp"
+                    app:labelVisibilityMode="selected"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/bottomnavview"
+                    />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:fabCradleMargin="10dp"
-        app:fabCradleVerticalOffset="10dp"
-        app:fabCradleRoundedCornerRadius="10dp"
-        android:layout_gravity="bottom">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-    tools:context=".MainActivity"
-    >
-
-    <data>
-
-    </data>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        >
-
-        <fragment
-            android:id="@+id/navHostFragment"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:defaultNavHost="true"
-            app:navGraph="@navigation/nav_graph"
-            />
-
-        <com.gauravk.bubblenavigation.BubbleNavigationLinearView
-            android:id="@+id/bottom_navigation_view_linear"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_rectangle_white"
-            android:elevation="8dp"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:menu="@menu/bottom_nav_menu"
-            app:navGraph="@navigation/nav_graph"
-            >
-
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/l_item_home"
+            </com.google.android.material.bottomappbar.BottomAppBar>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                app:bt_active="true"
-                app:bt_colorActive="#8279DA"
-                app:bt_colorInactive="#9e9e9e"
-                app:bt_icon="@drawable/ic_baseline_home_24"
-                app:bt_padding="10dp"
-                app:bt_shape="@drawable/ic_rectangle_btm"
-                app:bt_title="Home"
-                app:bt_titlePadding="10dp" />
+                android:src="@drawable/add"
+                app:maxImageSize="50dp"
+                android:id="@+id/myfab"
+                android:backgroundTint="@color/white"
+                app:layout_anchor="@id/bottomappbar"
 
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/l_item_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                app:bt_active="true"
-                app:bt_colorActive="#8279DA"
-                app:bt_colorInactive="#9e9e9e"
-                app:bt_icon="@drawable/ic_baseline_payment_24"
-                app:bt_padding="10dp"
-                app:bt_shape="@drawable/ic_rectangle_btm"
-                app:bt_title="Search"
-                app:bt_titlePadding="10dp" />
-
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/l_item_playlist"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:bt_active="true"
-                app:bt_colorActive="#8279DA"
-                app:bt_colorInactive="#AAAAAA"
-                app:bt_icon="@drawable/ic_baseline_person_outline_24"
-                app:bt_padding="10dp"
-                app:bt_shape="@drawable/ic_rectangle_btm"
-                app:bt_title="Subscription"
-                app:bt_titlePadding="10dp" />
-
-            <com.gauravk.bubblenavigation.BubbleToggleView
-                android:id="@+id/l_item_profile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="10dp"
-                app:bt_active="true"
-                app:bt_colorActive="#8279DA"
-                app:bt_colorInactive="#AAAAAA"
-                app:bt_icon="@drawable/ic_baseline_settings_24"
-                app:bt_padding="10dp"
-                app:bt_shape="@drawable/ic_rectangle_btm"
-                app:bt_title="Profile"
-                app:bt_titlePadding="10dp" />
+                />
 
 
-        </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/add"
-        app:layout_anchor="@id/bottomAppBar" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
