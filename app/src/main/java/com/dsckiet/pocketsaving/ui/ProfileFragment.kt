@@ -45,6 +45,7 @@ class ProfileFragment : Fragment() {
 
             databaseReference = FirebaseDatabase.getInstance().getReference("Users")
             val User = User(signInAccount.displayName,signInAccount.familyName,signInAccount.email,signInAccount.photoUrl.toString(),signInAccount.account.toString())
+            databaseReference.child(signInAccount.displayName.toString()).setValue(User)
             signInAccount.displayName?.let { databaseReference.child(it).setValue(User) }
 
         }
