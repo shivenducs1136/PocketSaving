@@ -3,7 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/bottom_item_background.xml" value="0.24791666666666667" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_blue_normal.xml" value="0.2484375" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/drawable/btn_blue_pressed.xml" value="0.2484375" />
@@ -40,15 +39,17 @@
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_continue_with_google.xml" value="0.23229166666666667" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_entry.xml" value="0.4" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_floating_btn.xml" value="0.23229166666666667" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_group_divide.xml" value="0.21822916666666667" />
+        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_group_divide.xml" value="0.1" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_home.xml" value="0.21794871794871795" />
+        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_loan.xml" value="0.23229166666666667" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_onboarding2.xml" value="0.23229166666666667" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_pay_online.xml" value="0.23229166666666667" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_plan_payments.xml" value="0.1" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_pocket_money.xml" value="0.264" />
-        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_profile.xml" value="0.4" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_settings.xml" value="0.1" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_trip_planning.xml" value="0.23229166666666667" />
+        <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/fragment_view_history.xml" value="0.23229166666666667" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/income.xml" value="0.1" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/layout/tripplanning_item.xml" value="0.4" />
         <entry key="..\:/Internship Work/PocketSaving/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />

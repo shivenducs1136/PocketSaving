@@ -49,7 +49,7 @@ class ContinueWithGoogleFragment : Fragment() {
         createRequest()
         auth = FirebaseAuth.getInstance()
 
-
+        binding.loadingLottie.visibility= View.GONE
 
         binding.btnCreateAccount.setOnClickListener {
 
@@ -60,7 +60,7 @@ class ContinueWithGoogleFragment : Fragment() {
                 Snackbar.make(requireView(),"Please connect to the Internet.",Snackbar.LENGTH_SHORT).show()
             }
         }
-
+        binding.viewPager.isClickable = false
         binding.skipfornow.setOnClickListener {
             val settings = activity?.getSharedPreferences("skip",Context.MODE_PRIVATE)
             val editor = settings?.edit()
@@ -77,6 +77,7 @@ class ContinueWithGoogleFragment : Fragment() {
         binding.viewPager.adapter = CWGViewPagerAdapter(requireActivity(), requireContext())
         TabLayoutMediator(binding.pageIndicator, binding.viewPager) { _, _ -> }.attach()
         binding.viewPager.offscreenPageLimit = 1
+        binding.viewPager.isClickable = false
 
         binding.viewPager.registerOnPageChangeCallback(object :
             ViewPager2.OnPageChangeCallback() {
@@ -89,6 +90,7 @@ class ContinueWithGoogleFragment : Fragment() {
                     if (currpos == 3) {
                         currpos = 0
                     }
+                    binding.viewPager.isClickable = false
                     binding.viewPager.setCurrentItem(currpos++, true)
                 }
 
@@ -113,6 +115,7 @@ class ContinueWithGoogleFragment : Fragment() {
     }
 
     private fun signIn() {
+        binding.loadingLottie.visibility= View.VISIBLE
         val signInIntent = googleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
     }
@@ -129,6 +132,7 @@ class ContinueWithGoogleFragment : Fragment() {
                 Log.d(ContentValues.TAG, "firebaseAuthWithGoogle:" + account.id)
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
+                binding.loadingLottie.visibility= View.GONE
 //                binding.load.visibility = View.GONE
                 Toast.makeText(requireContext(),"Sign In Failed Please Try Again ", Toast.LENGTH_SHORT).show()
                 // Google Sign In failed, update UI appropriately
@@ -147,6 +151,11 @@ class ContinueWithGoogleFragment : Fragment() {
                     val user = auth.currentUser
                     val i = Intent(requireActivity(), EnterPocketMoney::class.java)
                     startActivity(i)
+                    val settings = activity?.getSharedPreferences("skip",Context.MODE_PRIVATE)
+                    val edito = settings?.edit()
+                    edito?.putBoolean("skipped",false)
+                    edito?.commit()
+                    edito?.apply()
                     val sharedPref = activity?.getPreferences(Context.MODE_PRIVATE) ?: return@addOnCompleteListener
                     with (sharedPref.edit()) {
                         putInt("Flag", 0)

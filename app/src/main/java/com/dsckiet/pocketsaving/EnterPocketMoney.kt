@@ -30,12 +30,9 @@ class EnterPocketMoney : AppCompatActivity() {
             val highScore = sharedPref.getString("PocketMoney", "0")
             Log.e("EnterPocketMoney",highScore.toString())
             val i  = Intent(this,MainActivity::class.java)
-//            i.putExtra("PocketMoney",)
             startActivity(i)
             finish()
 
         }
-
-
     }
 }

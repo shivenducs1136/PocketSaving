@@ -41,7 +41,7 @@ class SplashActivity : AppCompatActivity() {
         val sharedPref = this?.getSharedPreferences("skip",Context.MODE_PRIVATE) ?: return
         isskipped = sharedPref.getBoolean("skipped", false)
         if(isNetworkConnected()){
-            Log.e("user",firebaseAuth.currentUser.toString())
+            Log.e("user","${firebaseAuth.currentUser.toString()} + ${!isskipped}")
             if (firebaseAuth.currentUser == null && !isskipped) {
                 lottieview.visibility = View.GONE
                 text.visibility = View.GONE
