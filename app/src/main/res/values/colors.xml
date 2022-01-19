@@ -17,5 +17,6 @@
     <color name="md_blue_100">#BBDEFB</color>
     <color name="md_deep_orange_100">#E78607</color>
     <color name="d_blue">#56D3FD</color>
+    <color name="colorlit">#FFBEB9</color>
 
 </resources>

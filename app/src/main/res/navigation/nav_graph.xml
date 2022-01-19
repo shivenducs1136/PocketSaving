@@ -55,6 +55,15 @@
         <action
             android:id="@+id/action_planPaymentsFragment_to_addPlanFragment"
             app:destination="@id/addPlanFragment" />
+        <action
+            android:id="@+id/action_planPaymentsFragment_to_groupDivideFragment"
+            app:destination="@id/groupDivideFragment" />
+        <action
+            android:id="@+id/action_planPaymentsFragment_to_loanFragment"
+            app:destination="@id/loanFragment" />
+        <action
+            android:id="@+id/action_planPaymentsFragment_to_tripPlanning"
+            app:destination="@id/tripPlanning" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -71,4 +80,32 @@
         android:name="com.dsckiet.pocketsaving.ui.AddPlanFragment"
         android:label="fragment_add_plan"
         tools:layout="@layout/fragment_add_plan" />
+    <fragment
+        android:id="@+id/tripPlanning"
+        android:name="com.dsckiet.pocketsaving.ui.TripPlanning"
+        android:label="fragment_trip_planning"
+        tools:layout="@layout/fragment_trip_planning" >
+        <action
+            android:id="@+id/action_tripPlanning_to_addTripPlanFragment"
+            app:destination="@id/addTripPlanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanFragment"
+        android:name="com.dsckiet.pocketsaving.ui.LoanFragment"
+        android:label="fragment_loan"
+        tools:layout="@layout/fragment_loan" />
+    <fragment
+        android:id="@+id/groupDivideFragment"
+        android:name="com.dsckiet.pocketsaving.ui.GroupDivideFragment"
+        android:label="fragment_group_divide"
+        tools:layout="@layout/fragment_group_divide" />
+    <fragment
+        android:id="@+id/addTripPlanFragment"
+        android:name="com.dsckiet.pocketsaving.ui.AddTripPlanFragment"
+        android:label="AddTripPlanFragment" >
+        <action
+            android:id="@+id/action_addTripPlanFragment_to_tripPlanning"
+            app:destination="@id/tripPlanning"
+            app:popUpTo="@id/tripPlanning" />
+    </fragment>
 </navigation>

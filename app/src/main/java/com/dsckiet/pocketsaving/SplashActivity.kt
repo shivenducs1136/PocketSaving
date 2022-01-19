@@ -26,6 +26,7 @@ class SplashActivity : AppCompatActivity() {
 
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var signInAccount: GoogleSignInAccount
+    var isskipped=false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -37,9 +38,11 @@ class SplashActivity : AppCompatActivity() {
         lottieview.visibility = View.GONE
         text.visibility = View.GONE
         cont.visibility = View.GONE
+        val sharedPref = this?.getSharedPreferences("skip",Context.MODE_PRIVATE) ?: return
+        isskipped = sharedPref.getBoolean("skipped", false)
         if(isNetworkConnected()){
             Log.e("user",firebaseAuth.currentUser.toString())
-            if (firebaseAuth.currentUser == null) {
+            if (firebaseAuth.currentUser == null && !isskipped) {
                 lottieview.visibility = View.GONE
                 text.visibility = View.GONE
                 cont.visibility = View.VISIBLE

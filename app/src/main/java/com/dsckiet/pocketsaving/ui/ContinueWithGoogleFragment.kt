@@ -61,7 +61,17 @@ class ContinueWithGoogleFragment : Fragment() {
             }
         }
 
+        binding.skipfornow.setOnClickListener {
+            val settings = activity?.getSharedPreferences("skip",Context.MODE_PRIVATE)
+            val editor = settings?.edit()
+            editor?.putBoolean("skipped",true)
+            editor?.commit()
+            editor?.apply()
 
+            val i = Intent(requireActivity(), EnterPocketMoney::class.java)
+            startActivity(i)
+
+        }
 
 
         binding.viewPager.adapter = CWGViewPagerAdapter(requireActivity(), requireContext())
