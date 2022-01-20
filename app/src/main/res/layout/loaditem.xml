@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:src="@drawable/greenbar"
+        android:scaleType="centerCrop"
+        android:id="@+id/green_attendance_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:src="@drawable/redbar"
+        android:scaleType="centerCrop"
+        android:id="@+id/red_attandance_bar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="10dp"
+        />
+
+    <ImageView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/edit_update"
+        app:layout_constraintTop_toTopOf="@+id/loan_amount"
+        app:layout_constraintBottom_toBottomOf="@+id/loan_amount"
+        app:layout_constraintLeft_toRightOf="@+id/loan_amount"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:autoSizeTextType="uniform"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/green_attendance_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/green_attendance_bar"
+        app:layout_constraintLeft_toRightOf="@+id/green_attendance_bar"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="4dp"
+        android:textStyle="bold"
+        android:text=" Sanidhya "
+        android:id="@+id/myfriend_name"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹ "
+        android:textColor="@color/black"
+        android:id="@+id/attendance_txt"
+        app:layout_constraintTop_toBottomOf="@+id/red_attandance_bar"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3000"
+        android:textSize="16sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/attendance_txt"
+        app:layout_constraintBottom_toBottomOf="@+id/attendance_txt"
+        app:layout_constraintLeft_toRightOf="@+id/attendance_txt"
+        android:id="@+id/loan_amount"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11 jan 2022 : "
+        android:textColor="#676666"
+        android:id="@+id/loan_date"
+        app:layout_constraintTop_toBottomOf="@+id/attendance_txt"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Loan Reason"
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/black"
+        android:id="@+id/loan_reason"
+        android:maxWidth="200dp"
+        android:maxLines="2"
+        android:textSize="12sp"
+        app:layout_constraintTop_toTopOf="@+id/loan_date"
+        app:layout_constraintBottom_toBottomOf="@+id/loan_date"
+        app:layout_constraintLeft_toRightOf="@+id/loan_date"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mark as paid"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:id="@+id/markaspaidbtn"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/mainbgpocketmoney"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/myfriend_name"
+        app:layout_constraintBottom_toBottomOf="@+id/myfriend_name"
+        app:layout_constraintLeft_toRightOf="@+id/myfriend_name"
+        android:text="has Taken or Given"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:id="@+id/hastakenorgiven"
+        android:layout_marginLeft="10dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

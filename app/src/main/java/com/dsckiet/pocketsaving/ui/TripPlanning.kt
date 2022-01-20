@@ -57,7 +57,7 @@ class TripPlanning : Fragment() {
         })
 
         binding.tripPlanningFab.setOnClickListener {
-            findNavController().navigate(R.id.action_tripPlanning_to_addTripPlanFragment)
+            findNavController().navigate(R.id.action_planPaymentsFragment_to_addTripPlanFragment)
         }
 
         val bundle = this.arguments

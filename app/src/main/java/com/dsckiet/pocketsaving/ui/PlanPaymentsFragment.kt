@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.dsckiet.pocketsaving.R
+import com.dsckiet.pocketsaving.ViewPagerAdapter.PlanPaymentViewPager
 import com.dsckiet.pocketsaving.databinding.FragmentPlanPaymentsBinding
+import com.google.android.material.tabs.TabLayoutMediator
 
 
 class PlanPaymentsFragment : Fragment() {
@@ -24,14 +26,27 @@ class PlanPaymentsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tripPlanning.setOnClickListener {
-            findNavController().navigate(R.id.action_planPaymentsFragment_to_tripPlanning)
-        }
-        binding.groupDivider.setOnClickListener {
-            findNavController().navigate(R.id.action_planPaymentsFragment_to_groupDivideFragment)
-        }
-        binding.loan.setOnClickListener {
-            findNavController().navigate(R.id.action_planPaymentsFragment_to_loanFragment)
-        }
+
+
+        val mytab =binding.planPaymentTabLayout
+        val mypager = binding.planPaymentViewPager
+
+        val adapter = PlanPaymentViewPager(requireActivity().supportFragmentManager,lifecycle)
+
+        mypager.adapter = adapter
+        TabLayoutMediator(mytab,mypager){
+            tab,position->
+            when(position){
+                0->{
+                    tab.text = "Trip Planning"
+                }
+                1->{
+                    tab.text = "Group Divide"
+                }
+                2->{
+                    tab.text = "Loan"
+                }
+            }
+        }.attach()
     }
 }

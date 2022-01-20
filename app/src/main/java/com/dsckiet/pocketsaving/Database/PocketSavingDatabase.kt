@@ -4,16 +4,20 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.dsckiet.pocketsaving.dao.LoanDao
 import com.dsckiet.pocketsaving.dao.PocketSavingDoa
 import com.dsckiet.pocketsaving.dao.TripDao
+import com.dsckiet.pocketsaving.entity.LoanEntity
 import com.dsckiet.pocketsaving.entity.PocketSavingEntity
 import com.dsckiet.pocketsaving.entity.TripEntity
 
-@Database(entities = [PocketSavingEntity::class,TripEntity::class],version = 1)
+@Database(entities = [PocketSavingEntity::class,TripEntity::class,LoanEntity::class],version = 1)
 abstract class PocketSavingDatabase: RoomDatabase() {
 
     abstract fun PocketSavingDAO(): PocketSavingDoa
     abstract fun tripDao(): TripDao
+    abstract fun loanDao(): LoanDao
+
     companion object{
 
         @Volatile

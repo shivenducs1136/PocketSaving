@@ -56,14 +56,14 @@
             android:id="@+id/action_planPaymentsFragment_to_addPlanFragment"
             app:destination="@id/addPlanFragment" />
         <action
+            android:id="@+id/action_planPaymentsFragment_to_addTripPlanFragment"
+            app:destination="@id/addTripPlanFragment" />
+        <action
+            android:id="@+id/action_planPaymentsFragment_to_addLoanFragment"
+            app:destination="@id/addLoanFragment" />
+        <action
             android:id="@+id/action_planPaymentsFragment_to_groupDivideFragment"
             app:destination="@id/groupDivideFragment" />
-        <action
-            android:id="@+id/action_planPaymentsFragment_to_loanFragment"
-            app:destination="@id/loanFragment" />
-        <action
-            android:id="@+id/action_planPaymentsFragment_to_tripPlanning"
-            app:destination="@id/tripPlanning" />
     </fragment>
     <fragment
         android:id="@+id/settingsFragment"
@@ -84,11 +84,7 @@
         android:id="@+id/tripPlanning"
         android:name="com.dsckiet.pocketsaving.ui.TripPlanning"
         android:label="fragment_trip_planning"
-        tools:layout="@layout/fragment_trip_planning" >
-        <action
-            android:id="@+id/action_tripPlanning_to_addTripPlanFragment"
-            app:destination="@id/addTripPlanFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_trip_planning" />
     <fragment
         android:id="@+id/loanFragment"
         android:name="com.dsckiet.pocketsaving.ui.LoanFragment"
@@ -107,5 +103,14 @@
             android:id="@+id/action_addTripPlanFragment_to_tripPlanning"
             app:destination="@id/tripPlanning"
             app:popUpTo="@id/tripPlanning" />
+    </fragment>
+    <fragment
+        android:id="@+id/addLoanFragment"
+        android:name="com.dsckiet.pocketsaving.ui.AddLoanFragment"
+        android:label="AddLoanFragment" >
+        <action
+            android:id="@+id/action_addLoanFragment_to_loanFragment"
+            app:destination="@id/loanFragment"
+            app:popUpTo="@id/loanFragment" />
     </fragment>
 </navigation>
