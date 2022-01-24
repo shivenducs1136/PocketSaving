@@ -50,7 +50,12 @@ class PocketSavingAdapter(val context: Context, val listener: HomeFragment): Rec
       val collect = allSubject[position]
 
         holder.itemTitle.text = collect.title
-        holder.rupees.text = collect.amountspend
+        if(collect.amountspend.isNullOrEmpty()){
+            holder.rupees.text = collect.amountadded
+        }
+        else{
+            holder.rupees.text = collect.amountspend
+        }
 
     }
 
